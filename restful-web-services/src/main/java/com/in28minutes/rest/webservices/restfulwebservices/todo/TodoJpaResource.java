@@ -58,7 +58,7 @@ public class TodoJpaResource {
 			@PathVariable String username,
 			@PathVariable long id, @RequestBody Todo todo) {
 		
-//		Todo todoUpdated = todoService.save(todo);
+		// Todo todoUpdated = todoService.save(todo);
 		Todo todoUpdated = todoJpaRepository.save(todo);
 		
 		return new ResponseEntity<Todo>(todo, HttpStatus.OK);
